@@ -1,0 +1,15 @@
+import { Router } from "express";
+import { createOrderUseCase } from "../infrastructure/di/container.js";
+
+const router = Router();
+
+router.post("/",async(req,res)=>{
+    const {id,userId,amount} = req.body;
+
+    const result = await createOrderUseCase.execute({id,userId,amount});
+
+    res.json(result);
+
+})
+
+export default router;
