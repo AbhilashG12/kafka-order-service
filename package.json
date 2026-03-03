@@ -7,18 +7,22 @@
     "dev": "tsx watch src/index.ts",
     "consumer": "tsx watch src/consumer.ts",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-  "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testPathPattern=unit",
-  "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testPathPattern=integration"
+    "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testPathPattern=unit",
+    "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testPathPattern=integration"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@pact-foundation/pact": "^16.2.0",
+    "@testcontainers/kafka": "^11.12.0",
+    "@testcontainers/postgresql": "^11.12.0",
     "@types/jest": "^30.0.0",
     "@types/supertest": "^7.2.0",
     "jest": "^30.2.0",
     "supertest": "^7.2.2",
+    "testcontainers": "^11.12.0",
     "ts-jest": "^29.4.6",
     "typescript": "^5.9.3"
   },

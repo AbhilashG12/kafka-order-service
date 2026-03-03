@@ -19,5 +19,19 @@ export default {
   testMatch: ['**/tests/**/*.spec.ts', '**/tests/**/*.test.ts'],
   verbose: true,
   clearMocks: true,
+  collectCoverage: true,
+  collectCoverageFrom: [
+    "src/**/*.ts",
+    "!src/main.ts",
+    "!src/consumer.ts"
+  ],
+  coverageThreshold: {
+    global: {
+      lines: 75,
+      statements: 80,
+      functions: 80,
+      branches: 50
+    }
+  },
   forceExit: true,
 };
