@@ -8,7 +8,10 @@ router.post("/",async(req,res)=>{
 
     const result = await createOrderUseCase.execute({id,userId,amount});
 
-    res.json(result);
+    return res.status(201).json({
+            id: result.order.id, 
+            status: result.status
+        });
 
 })
 
